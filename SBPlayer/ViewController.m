@@ -80,8 +80,20 @@ static CGFloat forwardRatio = 1;
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    //添加visualEffect视觉效果
+
     [self addVisualEffectViewWithMaterial:NSVisualEffectMaterialDark];
+    NSNumber *materialNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"material"];
+    if (materialNumber) {
+        [self addVisualEffectViewWithMaterial:materialNumber.integerValue];
+    }
+    NSData *data = ([[NSUserDefaults standardUserDefaults]objectForKey:@"currentColor"]);
+    NSColor *currentColor;
+    if(data != nil ){
+        currentColor = [NSUnarchiver unarchiveObjectWithData:data];
+    }
+    if (currentColor) {
+        self.controlBackgroundView.layer.backgroundColor = currentColor.CGColor;
+    }
 }
 //添加visualEffect视觉效果
 -(void)addVisualEffectViewWithMaterial:(NSVisualEffectMaterial)material {
@@ -1048,9 +1060,14 @@ NSTimer *leftSplitTimer;
         }
         self.visualEffectView.material = material;
         self.controlBackgroundView.layer.backgroundColor = [NSColor clearColor].CGColor;
+        [[NSUserDefaults standardUserDefaults]setObject:@(material) forKey:@"material"];
     }else{
         self.controlBackgroundView.layer.backgroundColor = color;
+        NSColor *selectedColor = [NSColor colorWithCGColor:color];
+        NSData *selectedColorData = [NSArchiver archivedDataWithRootObject:selectedColor];
+        [[NSUserDefaults standardUserDefaults]setObject:selectedColorData forKey:@"currentColor"];
     }
+    [[NSUserDefaults standardUserDefaults]synchronize];
 }
 #pragma mark - 慢放和快放
 //慢速按钮
