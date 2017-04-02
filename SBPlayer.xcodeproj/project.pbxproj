@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04A617481E90C5E10031A8B6 /* SBPlayer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = SBPlayer.entitlements; sourceTree = "<group>"; };
 		233B0DEA624BEC59C4F4E9E2 /* libPods-SBPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SBPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91290C831E88BA76001EAC26 /* VLCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VLCKit.framework; sourceTree = "<group>"; };
 		91290CC21E88F832001EAC26 /* VideoInfomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoInfomation.h; sourceTree = "<group>"; };
@@ -110,7 +111,6 @@
 		9188A3421E7233380035F6C8 /* URLAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLAsset.m; sourceTree = "<group>"; };
 		9188A3451E7233380035F6C8 /* WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowController.h; sourceTree = "<group>"; };
 		9188A3461E7233380035F6C8 /* WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowController.m; sourceTree = "<group>"; };
-		9190825F1E84AB6900F7965E /* SBPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SBPlayer.entitlements; sourceTree = "<group>"; };
 		91963F901E7F6A6D009F5E71 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		91963F911E7F6A6D009F5E71 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		91963F921E7F6C8D009F5E71 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -177,8 +177,8 @@
 		9188A3151E72303B0035F6C8 /* SBPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				04A617481E90C5E10031A8B6 /* SBPlayer.entitlements */,
 				91290C831E88BA76001EAC26 /* VLCKit.framework */,
-				9190825F1E84AB6900F7965E /* SBPlayer.entitlements */,
 				9188A33C1E7233380035F6C8 /* ThirdPartLib */,
 				9188A3551E72348A0035F6C8 /* Models */,
 				9188A3541E7234780035F6C8 /* Views */,
@@ -311,10 +311,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Sandbox = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
