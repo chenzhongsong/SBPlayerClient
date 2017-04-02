@@ -627,6 +627,9 @@ NSTimer *leftSplitTimer;
             [self.view.window center];
             return;
         }
+        if ([SBApplication share].isDoubleClickOpen) {
+            [self.view.window center];
+        }
     }
     [self.view layoutSubtreeIfNeeded];
     //添加视频view约束
