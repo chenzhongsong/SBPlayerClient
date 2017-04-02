@@ -32,4 +32,4 @@ Support media file format include but not only *webm. *rmvb. *.asf *.avi *.divx 
 
 
 > if you have any questions , please contact me 
-with email: 956035125@qq.com
+with email: 956035125@qq.com or issue it
