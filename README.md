@@ -6,9 +6,11 @@ This is a video player based on VLCKit with beautiful skin
 ## SBPlayer
 
 SBPlayer is a beautiful and powerful media player base on VLCKit.
+
 website:https://shibiao.github.io/SBPlayer
 
 简书:http://www.jianshu.com/p/1ad52c702190
+
 SPlayer public under GPL-3.0
 
 ## Introduction
