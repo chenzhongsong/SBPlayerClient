@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  SBPlayer
+
+  Created by sycf_ios on 2017/3/18.
+  Copyright © 2017年 shibiao. All rights reserved.
+*/
+"CFBundleDisplayName" = "SBPlayer-ビデオプレーヤー";
+"Alert" = "アラート" ;
+"No more videos!" = "もうビデオはありません！" ;
+"Play Error!" = "再生エラー！";
+"File Name" = "ファイル名";
+"loading..." = "読み込み中...";
+"Speed Normal" = "スピードノーマル" ;
+"Speed" = "速度";
+"Play/Pause" = "再生/一時停止";
+"Next" = "次";
+"Warning" = "警告";
+"You will delete all video records ?" = "すべてのビデオレコードを削除しますか？";
+"Cancel" = "キャンセル";
+"Done" = "はい" ;
+"Deleting completed"  = "完了した削除";

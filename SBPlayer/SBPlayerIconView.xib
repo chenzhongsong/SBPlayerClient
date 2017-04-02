@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SBPlayerIconView">
+            <connections>
+                <outlet property="iconImgView" destination="Iu8-d3-pbf" id="rkI-Xm-Imd"/>
+                <outlet property="titleLabel" destination="OjH-e0-BBM" id="mkv-iy-q9D"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J6W-MX-lMK">
+                    <rect key="frame" x="0.0" y="0.0" width="366" height="157"/>
+                    <subviews>
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iu8-d3-pbf">
+                            <rect key="frame" x="0.0" y="14" width="130" height="130"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="3f7-Uw-NOt"/>
+                                <constraint firstAttribute="height" constant="130" id="Au9-8c-xQi"/>
+                            </constraints>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SBPlayer" id="JmH-QZ-gVV"/>
+                        </imageView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjH-e0-BBM">
+                            <rect key="frame" x="136" y="47" width="232" height="64"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="SBPlayer" id="k3n-cY-cFX">
+                                <font key="font" metaFont="system" size="54"/>
+                                <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="J6W-MX-lMK" secondAttribute="trailing" id="6JN-G1-m0b"/>
+                <constraint firstItem="J6W-MX-lMK" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="pTU-Yn-0PP"/>
+                <constraint firstItem="J6W-MX-lMK" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="pb9-Gd-5rH"/>
+                <constraint firstAttribute="bottom" secondItem="J6W-MX-lMK" secondAttribute="bottom" id="s8B-zr-2K6"/>
+            </constraints>
+            <point key="canvasLocation" x="82" y="140.5"/>
+        </customView>
+        <customObject id="HY6-Uu-kow" customClass="SBPlayerIconView"/>
+    </objects>
+    <resources>
+        <image name="SBPlayer" width="512" height="512"/>
+    </resources>
+</document>

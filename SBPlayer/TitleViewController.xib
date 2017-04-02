@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TitleViewController">
+            <connections>
+                <outlet property="titleLabel" destination="bf9-VW-G1S" id="TvB-5J-JkK"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="479" height="29"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf9-VW-G1S">
+                    <rect key="frame" x="-2" y="0.0" width="483" height="29"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" usesSingleLineMode="YES" id="9Tc-c3-ZTE">
+                        <font key="font" metaFont="system" size="24"/>
+                        <color key="textColor" name="highlightColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="bf9-VW-G1S" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="aVx-Ke-CsN"/>
+                <constraint firstAttribute="bottom" secondItem="bf9-VW-G1S" secondAttribute="bottom" id="dMh-2R-gpy"/>
+                <constraint firstAttribute="trailing" secondItem="bf9-VW-G1S" secondAttribute="trailing" id="pGw-xh-tGf"/>
+                <constraint firstItem="bf9-VW-G1S" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="qjB-Bs-ZVl"/>
+            </constraints>
+            <point key="canvasLocation" x="138.5" y="45.5"/>
+        </customView>
+    </objects>
+</document>

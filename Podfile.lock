@@ -1,0 +1,17 @@
+PODS:
+  - Masonry (1.0.2)
+  - Realm (2.1.2):
+    - Realm/Headers (= 2.1.2)
+  - Realm/Headers (2.1.2)
+
+DEPENDENCIES:
+  - Masonry
+  - Realm
+
+SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Realm: efe855f4d977c8ce5a82d3116d9f1ff155a6550c
+
+PODFILE CHECKSUM: 30be1b27c017522d2ddbfd15505064d5ebe87ebe
+
+COCOAPODS: 1.2.0.beta.1

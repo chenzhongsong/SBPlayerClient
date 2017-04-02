@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  SBPlayer
+
+  Created by sycf_ios on 2017/3/18.
+  Copyright © 2017年 shibiao. All rights reserved.
+*/
+"CFBundleDisplayName" = "SBPlayer-Reproductor de video";
+"Alert" = "Alerta" ;
+"No more videos!" = "No más vídeos!" ;
+"Play Error!" = "Error en el juego!";
+"File Name" = "Nombre del archivo";
+"loading..." = "cargando...";
+"Speed Normal" = "Velocidad Normal" ;
+"Speed" = "Velocidad";
+"Play/Pause" = "Reproducir/pausar";
+"Next" = "Siguiente";
+"Warning" = "Advertencia";
+"You will delete all video records ?" = "¿Eliminará todos los registros de vídeo?";
+"Cancel" = "Cancelar";
+"Done" = "SÍ" ;
+"Deleting completed"  = "Eliminación completada";

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A63C337E12A62FA43D9E1261609B1A8FBB4C912B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A63C337E12A62FA43D9E1261609B1A8FBB4C912B" : 9223372036854775807,
+    "4755CEE398DB73D2F6AFA99161B70DC7F62A83AD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B8E475E-22EE-4CB2-B8C4-D28FFA6C2525",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A63C337E12A62FA43D9E1261609B1A8FBB4C912B" : "SBPlayer\/",
+    "4755CEE398DB73D2F6AFA99161B70DC7F62A83AD" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SBPlayer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SBPlayer.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/shibiao\/SBPlayerClient.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4755CEE398DB73D2F6AFA99161B70DC7F62A83AD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.com:shibiao\/SBPlayer.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A63C337E12A62FA43D9E1261609B1A8FBB4C912B"
+    }
+  ]
+}

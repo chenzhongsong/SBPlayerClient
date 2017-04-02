@@ -1,0 +1,177 @@
+
+/* Class = "NSMenuItem"; title = "SBPlayer"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "SBPlayer";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "1aP-mt-V3M"; */
+"1aP-mt-V3M.title" = "Rehacer";
+
+/* Class = "NSButtonCell"; title = "Clear All"; ObjectID = "2Cy-LY-YgK"; */
+"2Cy-LY-YgK.title" = "Limpiar todo";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "3Kq-l6-mYY"; */
+"3Kq-l6-mYY.title" = "Dupdo";
+
+/* Class = "NSMenuItem"; title = "Play&Pause"; ObjectID = "4EN-yA-p0u"; */
+"4EN-yA-p0u.title" = "Jugar&Pausa";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Enter Full Screen";
+
+/* Class = "NSMenuItem"; title = "Quit SBPlayer"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit SBPlayer";
+
+/* Class = "NSMenuItem"; title = "Control"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Controlar";
+
+/* Class = "NSMenuItem"; title = "About SBPlayer"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Acerca de SBPlayer";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Volume Min"; ObjectID = "6N1-gB-YAv"; */
+"6N1-gB-YAv.ibShadowedToolTip" = "Volume Min";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "7vQ-N2-nuR"; */
+"7vQ-N2-nuR.title" = "Pegar";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
+"DVo-aG-piG.title" = "Cerca";
+
+/* Class = "NSTextFieldCell"; title = "Label"; ObjectID = "DsH-dR-gZO"; */
+"DsH-dR-gZO.title" = "Label";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "Dui-dX-HbY"; */
+"Dui-dX-HbY.title" = "Editar";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "EfS-U3-1Hn"; */
+"EfS-U3-1Hn.title" = "Deshacer";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Ayuda";
+
+/* Class = "NSMenuItem"; title = "SBPlayer Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "SBPlayer Ayuda";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "Ver";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "Ver";
+
+/* Class = "NSMenuItem"; title = "Open File..."; ObjectID = "IAo-SY-fd9"; */
+"IAo-SY-fd9.title" = "Abrir documento...";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Play"; ObjectID = "Lah-4i-cV9"; */
+"Lah-4i-cV9.ibShadowedToolTip" = "Jugar";
+
+/* Class = "NSMenuItem"; title = "Open Network..."; ObjectID = "Ljx-5p-lSO"; */
+"Ljx-5p-lSO.title" = "Red abierta...";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Fast rate"; ObjectID = "MNN-ja-tri"; */
+"MNN-ja-tri.ibShadowedToolTip" = "Fast rate";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimizar";
+
+/* Class = "NSMenuItem"; title = "Hide SBPlayer"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Esconder SBPlayer";
+
+/* Class = "NSTextFieldCell"; title = "Playlist"; ObjectID = "S97-qA-mw2"; */
+"S97-qA-mw2.title" = "Playlist";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Ventana";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Color Panel"; ObjectID = "Tod-zt-f9d"; */
+"Tod-zt-f9d.ibShadowedToolTip" = "Color Panel";
+
+/* Class = "NSTextFieldCell"; title = "00:00"; ObjectID = "U0d-oK-FhT"; */
+"U0d-oK-FhT.title" = "00:00";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Esconder Others";
+
+/* Class = "NSMenu"; title = "Control"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Controlar";
+
+/* Class = "NSMenuItem"; title = "Delete All Records"; ObjectID = "WeT-3V-zwk"; */
+"WeT-3V-zwk.title" = "Eliminar todos los registros";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Slow rate"; ObjectID = "XAh-kP-p1n"; */
+"XAh-kP-p1n.ibShadowedToolTip" = "Slow rate";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "YBh-Z4-UF8"; */
+"YBh-Z4-UF8.title" = "Text Cell";
+
+/* Class = "NSWindow"; title = "SBPlayer"; ObjectID = "Ylp-gl-b6b"; */
+"Ylp-gl-b6b.title" = "SBPlayer";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Ventana";
+
+/* Class = "NSTextFieldCell"; title = "4.6M 476x788"; ObjectID = "agJ-xx-s6j"; */
+"agJ-xx-s6j.title" = "4.6M 476x788";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "Archivo";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "Archivo";
+
+/* Class = "NSTextFieldCell"; title = "00:00"; ObjectID = "eE8-Cx-1aR"; */
+"eE8-Cx-1aR.title" = "00:00";
+
+/* Class = "NSMenuItem"; title = "Next Video"; ObjectID = "hVl-ZY-GMG"; */
+"hVl-ZY-GMG.title" = "Siguiente Video";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Show Playlist"; ObjectID = "jNl-ch-JmW"; */
+"jNl-ch-JmW.title" = "Mostrar lista de reproducción";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "jQt-4D-HJ7"; */
+"jQt-4D-HJ7.title" = "Cortar";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "k5J-mi-PG9"; */
+"k5J-mi-PG9.title" = "Borrar";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Next"; ObjectID = "lG2-iV-HV2"; */
+"lG2-iV-HV2.ibShadowedToolTip" = "Next";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Volume Max"; ObjectID = "ntm-Wy-hIl"; */
+"ntm-Wy-hIl.ibShadowedToolTip" = "Volume Max";
+
+/* Class = "NSTextFieldCell"; title = "Total：00:00"; ObjectID = "pFA-5p-9zg"; */
+"pFA-5p-9zg.title" = "Total：00:00";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "qpg-Pw-YGh"; */
+"qpg-Pw-YGh.title" = "Seleccionar todo";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "qwJ-cF-1X0"; */
+"qwJ-cF-1X0.title" = "Editar";
+
+/* Class = "NSMenu"; title = "SBPlayer"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "SBPlayer";
+
+/* Class = "NSTableColumn"; headerCell.title = "播放列表"; ObjectID = "w8E-PV-vII"; */
+"w8E-PV-vII.headerCell.title" = "播放列表";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Ayuda";
+
+/* Class = "NSMenuItem"; title = "Theme/Skin"; ObjectID = "xrE-MZ-jX0"; */
+"xrE-MZ-jX0.title" = "piel";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Open File"; ObjectID = "yp0-F3-blK"; */
+"yp0-F3-blK.ibShadowedToolTip" = "Abrir documento";

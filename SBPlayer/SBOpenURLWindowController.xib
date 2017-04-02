@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SBOpenURLWindowController">
+            <connections>
+                <outlet property="urlField" destination="mJC-U6-CMG" id="Wfv-uu-XkF"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gUp-yY-Etz"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Open Source" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="400" height="100"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KjQ-E7-gzi">
+                        <rect key="frame" x="311" y="33" width="74" height="32"/>
+                        <buttonCell key="cell" type="push" title="Open" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h1B-O8-1b4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openURLAction:" target="-2" id="BKb-mY-phu"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJC-U6-CMG">
+                        <rect key="frame" x="49" y="39" width="260" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="UoB-EY-ARF">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-cH-ztA">
+                        <rect key="frame" x="6" y="42" width="43" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="URL：" id="PHi-uk-9wC">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mz-YW-FuU">
+                        <rect key="frame" x="9" y="11" width="382" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Support usual network stream (HTTP,RTMP,MMS,FTP...)" id="JJ7-9P-Le2">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-Fb-44d">
+                        <rect key="frame" x="173" y="74" width="55" height="14"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Network" id="N6E-fK-8Zl">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mJC-U6-CMG" firstAttribute="top" secondItem="GFN-Fb-44d" secondAttribute="bottom" constant="12.5" id="09x-8c-BZL"/>
+                    <constraint firstAttribute="trailing" secondItem="0Mz-YW-FuU" secondAttribute="trailing" constant="11" id="6gc-f8-DJ5"/>
+                    <constraint firstItem="KjQ-E7-gzi" firstAttribute="leading" secondItem="mJC-U6-CMG" secondAttribute="trailing" constant="8" id="7vN-1B-WEc"/>
+                    <constraint firstItem="Hdd-cH-ztA" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="HpU-KK-P1F"/>
+                    <constraint firstAttribute="trailing" secondItem="KjQ-E7-gzi" secondAttribute="trailing" constant="21" id="Igx-y7-3NF"/>
+                    <constraint firstAttribute="bottom" secondItem="0Mz-YW-FuU" secondAttribute="bottom" constant="11" id="NNg-Cc-7aG"/>
+                    <constraint firstItem="mJC-U6-CMG" firstAttribute="leading" secondItem="Hdd-cH-ztA" secondAttribute="trailing" constant="2" id="RBd-dF-55P"/>
+                    <constraint firstItem="KjQ-E7-gzi" firstAttribute="leading" secondItem="mJC-U6-CMG" secondAttribute="trailing" constant="8" id="bFx-Oz-YPk"/>
+                    <constraint firstItem="KjQ-E7-gzi" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="dFS-yz-lrm"/>
+                    <constraint firstItem="mJC-U6-CMG" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="ife-f0-Jdg"/>
+                    <constraint firstItem="0Mz-YW-FuU" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="11" id="jZp-Lr-igo"/>
+                    <constraint firstItem="Hdd-cH-ztA" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="8" id="p0Y-bW-mA2"/>
+                    <constraint firstItem="0Mz-YW-FuU" firstAttribute="top" secondItem="mJC-U6-CMG" secondAttribute="bottom" constant="11" id="phG-gQ-RGf"/>
+                    <constraint firstItem="GFN-Fb-44d" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="12.5" id="qIY-UN-CsJ"/>
+                    <constraint firstItem="mJC-U6-CMG" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="wST-GM-k8f"/>
+                    <constraint firstItem="GFN-Fb-44d" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="wbZ-mm-tDh"/>
+                    <constraint firstItem="mJC-U6-CMG" firstAttribute="leading" secondItem="Hdd-cH-ztA" secondAttribute="trailing" constant="2" id="zH6-xy-ypb"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="105" y="60"/>
+        </window>
+        <customObject id="r6S-Vy-duV" customClass="SBOpenURLWindowController"/>
+    </objects>
+</document>

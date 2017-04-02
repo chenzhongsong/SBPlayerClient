@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  SBPlayer
+
+  Created by sycf_ios on 2017/3/18.
+  Copyright © 2017年 shibiao. All rights reserved.
+*/
+"Alert" = "温馨提示";
+"No more videos!" = "没有更多视频!";
+"Play Error!" = "播放失败";
+"File Name" = "文件名";
+"loading..." = "加载中...";
+"Speed Normal" = "正常速度";
+"Speed" = "速度";
+"Play/Pause" = "播放/暂停";
+"Next" = "下一个";
+"Warning" = "提醒";
+"You will delete all video records ?" = "是否删除视频列表所有内容?";
+"Cancel" = "取消";
+"Done" = "确定";
+"Deleting completed" = "删除完成";
+"CFBundleDisplayName" = "SBPlayer-优秀视频播放器，极速播放，自定义皮肤";

@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  SBPlayer
+
+  Created by sycf_ios on 2017/3/18.
+  Copyright © 2017年 shibiao. All rights reserved.
+*/
+"Alert" = "Alert" ;
+"No more videos!" = "No more videos!" ;
+"Play Error!" = "Play Error!";
+"File Name" = "File Name";
+"loading..." = "loading...";
+"Speed Normal" = "Speed Normal" ;
+"Speed" = "Speed";
+"Play/Pause" = "Play/Pause";
+"Next" = "Next";
+"Warning" = "Warning";
+"You will delete all video records ?" = "You will delete all video records ?";
+"Cancel" = "Cancel";
+"Done" = "Done" ;
+"Deleting completed"  = "Deleting completed";
+"CFBundleDisplayName" = "SBPlayer-VideoPlayer,Beautiful skin";

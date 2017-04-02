@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ColorPanelViewController">
+            <connections>
+                <outlet property="colorEight" destination="b0e-p7-Kcy" id="qM3-oV-4IZ"/>
+                <outlet property="colorFive" destination="gDU-Mp-KMk" id="oKM-In-T7z"/>
+                <outlet property="colorFour" destination="OZR-gP-I91" id="dp3-NZ-Tdv"/>
+                <outlet property="colorOne" destination="ku7-vX-vbL" id="1tu-gF-ujD"/>
+                <outlet property="colorSeven" destination="nt2-pq-Sr2" id="UbX-zW-5d8"/>
+                <outlet property="colorSix" destination="vgO-ns-Iwu" id="p9P-8Q-YAQ"/>
+                <outlet property="colorThree" destination="QcH-S0-nJZ" id="euA-VT-cKP"/>
+                <outlet property="colorTwo" destination="5Js-6X-Wwz" id="9sz-H7-Sw9"/>
+                <outlet property="materialDark" destination="LjT-C0-fBe" id="jgG-6F-iVy"/>
+                <outlet property="materialMediumLight" destination="LwY-MZ-P3m" id="QHe-g4-xgb"/>
+                <outlet property="materialUltraDark" destination="2EC-Dx-GAF" id="kfR-dW-eUj"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="XL4-w2-fRZ">
+                    <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+                    <subviews>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="13" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17Z-lS-1eM">
+                            <rect key="frame" x="17" y="98" width="146" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button toolTip="Material Dark" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LjT-C0-fBe">
+                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="Qej-Nf-yxy"/>
+                                        <constraint firstAttribute="height" constant="40" id="fHA-0X-zVn"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MaterialDark" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yVC-H2-jsY">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedColorPanel:" target="-2" id="0bk-iQ-Uop"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Material Medium Light" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LwY-MZ-P3m">
+                                    <rect key="frame" x="53" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="VC0-KK-hIt"/>
+                                        <constraint firstAttribute="width" constant="40" id="x8x-ge-DK3"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MaterialMediumLight" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4NF-Kk-ayu">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedColorPanel:" target="-2" id="2u8-O2-QxB"/>
+                                    </connections>
+                                </button>
+                                <button toolTip="Material Ultra Dark" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2EC-Dx-GAF">
+                                    <rect key="frame" x="106" y="0.0" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="ado-q9-u5s"/>
+                                        <constraint firstAttribute="width" constant="40" id="ffi-4t-4vQ"/>
+                                    </constraints>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MaterialUltraDark" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dq8-F2-gFw">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="clickedColorPanel:" target="-2" id="LBz-G4-XcL"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="0Mf-g9-1dT">
+                            <rect key="frame" x="17" y="87" width="146" height="5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </box>
+                        <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ElB-RN-1Uz">
+                            <rect key="frame" x="18" y="13" width="144" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6T-fe-N9m">
+                                    <rect key="frame" x="0.0" y="38" width="144" height="30"/>
+                                    <subviews>
+                                        <button toolTip="Red Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ku7-vX-vbL">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Z2i-EG-vKD"/>
+                                                <constraint firstAttribute="height" constant="30" id="fAz-cP-FYy"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z0f-Tb-aEi">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="il3-Gw-uIU"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Green Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Js-6X-Wwz">
+                                            <rect key="frame" x="38" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7D3-MN-4zC"/>
+                                                <constraint firstAttribute="width" constant="30" id="BAp-Mx-WTf"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="X5F-Rq-PiI">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="fV5-Zs-8vF"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Blue Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QcH-S0-nJZ">
+                                            <rect key="frame" x="76" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="DjN-Tp-bC3"/>
+                                                <constraint firstAttribute="width" constant="30" id="HyS-k8-eu7"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jT0-m2-cvH">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="NUk-cq-HlL"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Black Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-gP-I91">
+                                            <rect key="frame" x="114" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="8bi-0h-JlK"/>
+                                                <constraint firstAttribute="height" constant="30" id="Tag-pE-q1L"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9YV-X1-De7">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="6eK-82-OTK"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VzI-gs-tZB">
+                                    <rect key="frame" x="0.0" y="0.0" width="144" height="30"/>
+                                    <subviews>
+                                        <button toolTip="Purple Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gDU-Mp-KMk">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="4CG-sH-LRv"/>
+                                                <constraint firstAttribute="width" constant="30" id="PuN-es-ecB"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tc0-o4-1Pd">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="itM-ZO-TOi"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Magenta Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vgO-ns-Iwu">
+                                            <rect key="frame" x="38" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="RAY-i1-Qxz"/>
+                                                <constraint firstAttribute="height" constant="30" id="l1f-m5-aoI"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2ZT-Zn-12x">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="vUO-zn-x2t"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Orange Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nt2-pq-Sr2">
+                                            <rect key="frame" x="76" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="628-b5-vdQ"/>
+                                                <constraint firstAttribute="height" constant="30" id="BhT-PZ-ext"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1yb-he-sRR">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="56Y-UB-LXX"/>
+                                            </connections>
+                                        </button>
+                                        <button toolTip="Brown Color" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-p7-Kcy">
+                                            <rect key="frame" x="114" y="0.0" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="5Aw-n6-dtH"/>
+                                                <constraint firstAttribute="width" constant="30" id="wjx-qO-fIR"/>
+                                            </constraints>
+                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p7K-Qg-wkM">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="clickedColorPanel:" target="-2" id="gCM-Vq-WI4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <visibilityPriorities>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                        <integer value="1000"/>
+                                    </visibilityPriorities>
+                                    <customSpacing>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                        <real value="3.4028234663852886e+38"/>
+                                    </customSpacing>
+                                </stackView>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="XL4-w2-fRZ" secondAttribute="bottom" id="03I-sq-8ZX"/>
+                <constraint firstItem="XL4-w2-fRZ" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="lqc-KR-OaA"/>
+                <constraint firstItem="XL4-w2-fRZ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="rtS-sN-ykE"/>
+                <constraint firstAttribute="trailing" secondItem="XL4-w2-fRZ" secondAttribute="trailing" id="sed-63-xgi"/>
+            </constraints>
+        </customView>
+    </objects>
+    <resources>
+        <image name="MaterialDark" width="800" height="600"/>
+        <image name="MaterialMediumLight" width="800" height="600"/>
+        <image name="MaterialUltraDark" width="800" height="600"/>
+    </resources>
+</document>
