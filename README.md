@@ -28,7 +28,7 @@ Features:
 ![1](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss.jpg)
 ![2](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss%20(3).jpg)
 ![3](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss%20(2).jpg)
-![4](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss%20(1).jpg)
+![4](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss1.jpg)
 
 if you have any questions , please contact me 
 with email: 956035125@qq.com
