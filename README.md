@@ -13,7 +13,7 @@ website:https://shibiao.github.io/SBPlayer
 
 SPlayer published under GPL-3.0
 
-## Introduction
+## Introduction（中文介绍请点击：[http://www.jianshu.com/p/1ad52c702190](http://www.jianshu.com/p/1ad52c702190)）
 
 SBPlayer can play almost all video formats and Audio formats
 Support media file format include but not only *webm. *rmvb. *.asf *.avi *.divx *.dv *.flv *.gxf *.m1v *.m2v *.m2ts *.m4v *.mkv *.mov *.mp2 *.mp4 *.mpeg *.mpeg1 *.mpeg2 *.mpeg4 *.mpg *.mts *.mxf *.ogg *.ogm *.ps *.ts *.vob *.wmv *.a52 *.aac *.ac3 *.dts *.flac *.m4a *.m4p *.mka *.mod *.mp1 *.mp2 *.mp3 *.ogg
