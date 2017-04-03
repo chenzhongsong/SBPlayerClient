@@ -6,6 +6,8 @@ This is a video player based on VLCKit with beautiful skin
 ## SBPlayer
 中文介绍请点击：[SBPlayerClient](http://www.jianshu.com/p/1ad52c702190)
 
+中文使用方法请点击：[教你熟练使用SBPlayer](http://www.jianshu.com/p/bd9716cafd38)
+
 SBPlayer is a beautiful and powerful media player base on VLCKit.
  
 website:https://shibiao.github.io/SBPlayer
