@@ -1046,6 +1046,14 @@ NSTimer *leftSplitTimer;
                 [self.tableView reloadData];
             }];
             break;
+        }else{
+            if (!item.isItemAvailable && [aVideo.url.lastPathComponent isEqualToString:item.url.relativePath.lastPathComponent]) {
+                [REALM transactionWithBlock:^{
+                    [REALM deleteObject:aVideo];
+                    [REALM commitWriteTransaction];
+                    [self.tableView reloadData];
+                }];
+            }
         }
     }
 }
