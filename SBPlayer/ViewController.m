@@ -184,7 +184,7 @@ NSTimer *leftSplitTimer;
 }
 -(void)mouseMoved:(NSEvent *)event{
     [super mouseMoved:event];
-//    [NSCursor unhide];
+    [NSCursor unhide];
     if (self.movie.url.relativePath.length != 0) {
         self.titleView.view.hidden = NO;
         [self setSystemCloseMiniaturiazeAndZoomButtonsHide:NO];
@@ -201,7 +201,7 @@ NSTimer *leftSplitTimer;
                 [self.controlBackgroundView mas_remakeConstraints:^(MASConstraintMaker *make) {
                     make.height.mas_equalTo(@0);
                 }];
-//                [NSCursor hide];
+                [NSCursor hide];
                 self.titleView.view.hidden = YES;
                 [leftSplitTimer invalidate];
                 leftSplitTimer = nil;
@@ -823,7 +823,7 @@ NSTimer *leftSplitTimer;
     }];
 }
 -(void)willExitFull:(NSNotification *)notification {
-//    [NSCursor unhide];
+    [NSCursor unhide];
     [leftSplitTimer invalidate];
     leftSplitTimer = nil;
     [self.controlBackgroundView mas_remakeConstraints:^(MASConstraintMaker *make) {
