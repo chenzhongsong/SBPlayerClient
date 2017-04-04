@@ -72,9 +72,7 @@
 - (void)handleAppleEvent:(NSAppleEventDescriptor *)event withReplyEvent:(NSAppleEventDescriptor *)replyEvent
 {
     NSString* url = [[event paramDescriptorForKeyword:keyDirectObject] stringValue];
-//    if (url) {
-//        _pendingURL = url;
-//    }
+    //这个里面的方法都是无用代码，一开始我是不情愿使用的，但在Apple文档中看到似乎又要添加这个方法。测试过很多次没走过里面的方法。可以无视NSAppleEventManager
     _isReady = YES;
     url = [url substringFromIndex:5];
     if ([[url substringToIndex:6] isEqual: @"http//"]) {        url = [url substringFromIndex:6];
@@ -112,18 +110,6 @@
     [self.mainWindowController.window addChildWindow:urlWindow ordered:NSWindowAbove];
 }
 #pragma mark - 控制
-/**
- //点击画板
- - (IBAction)handleToolBox:(id)sender;
- //播放
- - (IBAction)play:(id)sender;
- //下一个
- - (IBAction)next:(id)sender;
- //显示或者隐藏
- - (IBAction)showOrHidePlaylist:(id)sender;
- //静音
- - (IBAction)minVolume:(id)sender;
- */
 
 //删除所有记录
 - (IBAction)deleteAllRecords:(id)sender {

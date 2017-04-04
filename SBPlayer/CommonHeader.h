@@ -14,4 +14,12 @@
 #define kScreenHeight [NSScreen mainScreen].visibleFrame.size.height
 //可见屏幕宽度
 #define kScreenWidth  [NSScreen mainScreen].visibleFrame.size.width
+//窗口尺寸
+#define kWindowSize (self.view.window.frame.size)
+//movie url string
+#define kMovieUrlRelativeString (self.movie.url.relativeString)
+//播放器的size
+#define kPlayerSize (self.playerView.frame.size)
+//当前window
+#define kCurrentWindow (self.view.window)
 #endif /* CommonHeader_h */

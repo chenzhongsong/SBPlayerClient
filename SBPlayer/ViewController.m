@@ -59,8 +59,7 @@
 @property (nonatomic,strong) SBAlertView *loadingTipView;
 //播放器图标视图
 @property (nonatomic,strong) SBPlayerIconView *iconVC;
-//工具箱popover视图
-@property (nonatomic,strong) NSPopover *toolBoxPopover;
+
 //viusalEffectView
 @property (nonatomic,strong) NSVisualEffectView *visualEffectView;
 //颜色控制器
@@ -80,7 +79,7 @@ static CGFloat forwardRatio = 1;
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-
+    //初始化播放器颜色
     [self addVisualEffectViewWithMaterial:NSVisualEffectMaterialDark];
     NSNumber *materialNumber = [[NSUserDefaults standardUserDefaults]objectForKey:@"material"];
     if (materialNumber) {
@@ -151,8 +150,6 @@ static CGFloat forwardRatio = 1;
     //    [self.tableView setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleSourceList];
     //设置NSTableView 双击事件
     [self.tableView setDoubleAction:@selector(doubleClickTableViewRow:)];
-    //设置NSTableView 单击事件
-    [self.tableView setAction:@selector(singleClickTableViewRow:)];
     self.leftSplitView.delegate = self;
     [self initPlaylistTableView];
     self.titleView = [[TitleViewController alloc]init];
@@ -216,9 +213,9 @@ NSTimer *leftSplitTimer;
 }
 //设置系统关闭，最小化和最大化按钮的显示与隐藏
 -(void)setSystemCloseMiniaturiazeAndZoomButtonsHide:(BOOL)isHide{
-    [self.view.window standardWindowButton:NSWindowCloseButton].hidden = isHide;
-    [self.view.window standardWindowButton:NSWindowMiniaturizeButton].hidden = isHide;
-    [self.view.window standardWindowButton:NSWindowZoomButton].hidden = isHide;
+    [kCurrentWindow standardWindowButton:NSWindowCloseButton].hidden = isHide;
+    [kCurrentWindow standardWindowButton:NSWindowMiniaturizeButton].hidden = isHide;
+    [kCurrentWindow standardWindowButton:NSWindowZoomButton].hidden = isHide;
 }
 - (IBAction)openFile:(id)sender {
     self.openPanel = [[NSOpenPanel alloc]init];
@@ -386,12 +383,12 @@ NSTimer *leftSplitTimer;
                 break;
             case VLCMediaPlayerStateBuffering:
             {
-                if (self.movie.url == nil ||self.movie.url.relativeString.length == 0) {
+                if (self.movie.url == nil ||kMovieUrlRelativeString.length == 0) {
                     return;
                 }
                 
                 if (!_loadingTipView && [self isStream]) {
-                    [self.view.window setContentSize:NSMakeSize(800, 600)];
+                    [kCurrentWindow setContentSize:NSMakeSize(800, 600)];
                     self.loadingTipView = [[SBAlertView alloc]initWithTitle:NSLocalizedString(@"loading...", nil)];
                     self.loadingTipView.frame = NSMakeRect(5, 5, 130, 23);
                     self.loadingTipView.wantsLayer = YES;
@@ -456,7 +453,7 @@ NSTimer *leftSplitTimer;
             case VLCMediaPlayerStatePaused:
             {
                 if (![player hasVideoOut]&&(![self isMusicFormat])) {
-                    if (self.movie.url.relativeString != 0) {
+                    if (kMovieUrlRelativeString != 0) {
                         [self sbViewGetFileURL:self.movie.url];
                     }
                 }
@@ -500,26 +497,16 @@ NSTimer *leftSplitTimer;
     return NO;
 }
 -(BOOL)isStream {
-    NSString *string = self.movie.url.relativeString;
-    if ([string containsString:@"HTTP://"]) {
+    NSString *string = kMovieUrlRelativeString;
+    if ([string containsString:@"HTTP://"] ||
+        [string containsString:@"http://"] ||
+        [string containsString:@"https://"] ||
+        [string containsString:@"HTTPS://"] ||
+        [string containsString:@"rtmp://"] ||
+        [string containsString:@"rtsp://"] ||
+        [string containsString:@"mms://"]
+        ) {
         return YES;
-    }else if ([string containsString:@"http://"]){
-        return YES;
-    }
-    else if ([string containsString:@"https://"]){
-        return YES;
-    }
-    else if ([string containsString:@"HTTPS://"]){
-        return YES;
-    }
-    else if ([string containsString:@"rtmp://"]){
-        return YES;
-    }else if ([string containsString:@"rtsp://"]){
-        return YES;
-    }else if ([string containsString:@"mms://"]){
-        return YES;
-    }else{
-        return NO;
     }
     return NO;
 }
@@ -552,7 +539,7 @@ NSTimer *leftSplitTimer;
                 //移除视频并初始化播放器
                 [self removeVideoAndInitPlayer];
                 if (_isFullScreen) {
-                    [self.view.window setContentSize:[NSScreen mainScreen].frame.size];
+                    [kCurrentWindow setContentSize:[NSScreen mainScreen].frame.size];
                 }
             }
             break;
@@ -562,7 +549,7 @@ NSTimer *leftSplitTimer;
             //移除视频并初始化播放器
             [self removeVideoAndInitPlayer];
             if (_isFullScreen) {
-                [self.view.window setContentSize:[NSScreen mainScreen].frame.size];
+                [kCurrentWindow setContentSize:[NSScreen mainScreen].frame.size];
             }
 
         }
@@ -580,7 +567,7 @@ NSTimer *leftSplitTimer;
     self.movie = nil;
     player = nil;
     [self setupPlayerWithContentOfFile:[NSURL new]];
-    [self.view.window setContentSize:NSMakeSize(800, 600)];
+    [kCurrentWindow setContentSize:NSMakeSize(800, 600)];
     [self addIconView];
 }
 //添加消息中心
@@ -616,25 +603,25 @@ NSTimer *leftSplitTimer;
 //        if (height <= kScreenHeight - 60 ) {
             
             [self.leftSplitView setFrameSize:NSMakeSize(width*videoScaleRatio, height)];
-            [self.view.window setContentSize:NSMakeSize(kScreenHeight/4*3*videoScaleRatio, kScreenHeight/4*3+60)];
+            [kCurrentWindow setContentSize:NSMakeSize(kScreenHeight/4*3*videoScaleRatio, kScreenHeight/4*3+60)];
 //        }
         if (width<=0&&height<=0) {
             self.playlist.hidden = YES;
             if (_loadingTipView) {
                 _loadingTipView.hidden = YES;
             }
-            [self.view.window setFrame:NSMakeRect(0, 0, 550, 80) display:YES];
-            [self.view.window center];
+            [kCurrentWindow setFrame:NSMakeRect(0, 0, 550, 80) display:YES];
+            [kCurrentWindow center];
             return;
         }
         if ([SBApplication share].isDoubleClickOpen) {
-            [self.view.window center];
+            [kCurrentWindow center];
         }
     }
     [self.view layoutSubtreeIfNeeded];
     //添加视频view约束
     [self setupPlayerViewConstraint];
-    [self.view.window updateConstraintsIfNeeded];
+    [kCurrentWindow updateConstraintsIfNeeded];
     
 }
 //添加视频View约束
@@ -643,7 +630,7 @@ NSTimer *leftSplitTimer;
     CGFloat width = player.videoSize.width;
     CGFloat height = player.videoSize.height;
     if (width<=0&&height<=0) {
-        [self.view.window setFrame:NSMakeRect(0, 0, 550, 80) display:YES];
+        [kCurrentWindow setFrame:NSMakeRect(0, 0, 550, 80) display:YES];
         return;
     }
     [self.playerView addConstraint:[NSLayoutConstraint constraintWithItem:self.playerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.playerView attribute:NSLayoutAttributeHeight multiplier:videoScaleRatio constant:0]];
@@ -675,11 +662,6 @@ NSTimer *leftSplitTimer;
 }
 //MARK: 点击工具箱
 - (IBAction)handleToolBox:(id)sender {
-    //    if (_toolBoxPopover.isShown) {
-    //        [_toolBoxPopover close];
-    //        return;
-    //    }
-    //    [self.toolBoxPopover showRelativeToRect:self.toolBtn.bounds ofView:self.toolBtn preferredEdge:NSRectEdgeMinY];
     if (_colorPanelPopover.isShown) {
         [_colorPanelPopover close];
         return;
@@ -706,7 +688,7 @@ NSTimer *leftSplitTimer;
 }
 //视频为空
 -(void)movieURLIsEmpty{
-    NSString *relativeURL = self.movie.url.relativeString;
+    NSString *relativeURL = kMovieUrlRelativeString;
     if (relativeURL == nil || relativeURL.length==0) {
         if (self.tableView.numberOfRows != 0) {
             SBPlaylistItem *item = [self.tableView viewAtColumn:0 row:0 makeIfNecessary:YES];
@@ -748,7 +730,7 @@ NSTimer *leftSplitTimer;
             [self.leftSplitView setFrameSize:NSMakeSize(self.playerView.frame.size.width+200, self.playerView.frame.size.height)];
             [self.splitView setFrameSize:NSMakeSize(self.leftSplitView.frame.size.width+self.rightSplitView.frame.size.width, self.leftSplitView.frame.size.width)];
             [self.controlBackgroundView setFrameSize:NSMakeSize(self.leftSplitView.frame.size.width+self.rightSplitView.frame.size.width, 60)];
-            [self.view.window setContentSize:NSMakeSize(self.splitView.frame.size.width, self.splitView.frame.size.height+self.controlBackgroundView.frame.size.height)];
+            [kCurrentWindow setContentSize:NSMakeSize(self.splitView.frame.size.width, self.splitView.frame.size.height+self.controlBackgroundView.frame.size.height)];
 
         }
     }
@@ -774,7 +756,7 @@ NSTimer *leftSplitTimer;
 }
 #pragma mark - VLCMediaPlayerDelegate
 - (void)mediaPlayerStateChanged:(NSNotification *)aNotification{
-    if (self.movie.url.relativeString.length == 0) {
+    if (kMovieUrlRelativeString.length == 0) {
         [self.playOrPauseBtn setImage:[NSImage imageNamed:@"Play"]];
         [player pause];
         return;
@@ -806,10 +788,10 @@ NSTimer *leftSplitTimer;
 #pragma mark - Window Resize
 -(void)screenResize{
     [self hideRightSplitView];
-    self.volumeStackView.hidden = self.view.window.frame.size.width<550 ? YES : NO ;
-    self.toolBtn.hidden = self.view.window.frame.size.width <340 ? YES : NO ;
-    self.iconVC.view.hidden = self.view.window.frame.size.height <190 ? YES : NO ;
-    self.playlist.hidden = self.view.window.frame.size.height <100 ? YES : NO;
+    self.volumeStackView.hidden = kWindowSize.width<550 ? YES : NO ;
+    self.toolBtn.hidden = kWindowSize.width <340 ? YES : NO ;
+    self.iconVC.view.hidden = kWindowSize.height <190 ? YES : NO ;
+    self.playlist.hidden = kWindowSize.height <100 ? YES : NO;
     [self setupLeftSplitView];
     
 }
@@ -832,7 +814,7 @@ NSTimer *leftSplitTimer;
 }
 -(void)didExitFull:(NSNotification *)notification{
     _isFullScreen = NO;
-    if (self.movie.url.relativeString.length == 0) {
+    if (kMovieUrlRelativeString.length == 0) {
         return;
     }
     [self.controlBackgroundView mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -852,7 +834,7 @@ NSTimer *leftSplitTimer;
 
 //暂停视频
 -(void)pauseMovie{
-    if (self.movie.url.relativeString.length == 0) {
+    if (kMovieUrlRelativeString.length == 0) {
         return;
     }
     if (!player.isPlaying)   {
@@ -957,11 +939,8 @@ NSTimer *leftSplitTimer;
                 aVideoInfo.totalTime = self.movie.length.stringValue;
                 CGFloat fileSize = [[[NSFileManager defaultManager]attributesOfItemAtPath:self.movie.url.relativePath error:nil]fileSize];
                 aVideoInfo.size = [NSString stringWithFormat:@"%.1fM  %ld x %ld",fileSize/(1000*1000),(long)player.videoSize.width,(long)player.videoSize.height];
-                //                [REALM transactionWithBlock:^{
-                //                    [REALM addOrUpdateObject:aVideoInfo];
                 [REALM commitWriteTransaction];
                 [self.tableView reloadData];
-                //                }];
                 _hasAccessVideoInfo = NO;
             }
             
@@ -1020,20 +999,7 @@ NSTimer *leftSplitTimer;
     
     [self sbViewGetFileURL:item.url];
 }
-//单击NSTableView Row的响应事件
--(void)singleClickTableViewRow:(NSTableView *)tableView{
-    //    if (tableView.selectedRow == -1) return;
-    //    SBPlaylistItem *item;
-    //    NSInteger rowCounts = tableView.numberOfRows;
-    //    for (NSInteger i = 0; i < rowCounts; i++) {
-    //        item = [tableView viewAtColumn:0 row:i makeIfNecessary:YES];
-    //        item.layer.backgroundColor = kTableViewBackgroundColor.CGColor;
-    //        item.wantsLayer = NO;
-    //    }
-    //    item = [tableView viewAtColumn:0 row:tableView.selectedRow makeIfNecessary:YES];
-    //    item.wantsLayer = YES;
-    //    item.layer.backgroundColor = [NSColor grayColor].CGColor;
-}
+
 #pragma mark - SBPlaylistItemDelegate 点击item右边移除按钮时，删除当前item
 -(void)sbPlaylistItemDeleteCurrentItem:(SBPlaylistItem *)item{
     REALM.autorefresh = YES;
@@ -1157,7 +1123,7 @@ NSButton *fastBtn;
         alert.informativeText = NSLocalizedString(@"You will delete all video records ?", nil);
         [alert addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
         [alert addButtonWithTitle:NSLocalizedString(@"Done", nil)];
-        [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+        [alert beginSheetModalForWindow:kCurrentWindow completionHandler:^(NSModalResponse returnCode) {
             if (returnCode == NSAlertSecondButtonReturn) {
                 [REALM transactionWithBlock:^{
                     [REALM deleteAllObjects];
@@ -1218,17 +1184,7 @@ NSButton *fastBtn;
     });
 }
 #pragma mark - 懒加载
-//暂时没用上toolBoxPopover
--(NSPopover *)toolBoxPopover{
-    if (!_toolBoxPopover) {
-        _toolBoxPopover = [[NSPopover alloc]init];
-        _toolBoxPopover.behavior = NSPopoverBehaviorSemitransient;
-        _toolBoxPopover.contentSize = NSMakeSize(200, 175);
-        ToolViewController *toolVC = [[ToolViewController alloc]initWithNibName:@"ToolViewController" bundle:nil];
-        _toolBoxPopover.contentViewController = toolVC;
-    }
-    return _toolBoxPopover;
-}
+
 -(NSVisualEffectView *)visualEffectView{
     if (!_visualEffectView) {
         _visualEffectView = [[NSVisualEffectView alloc]init];
@@ -1295,34 +1251,3 @@ NSButton *fastBtn;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    player.scaleFactor = 1.2;
-//    char *aspradio = (char *)[@"16:9" UTF8String];
-//    player.videoAspectRatio = aspradio;
-//        [self.splitView updateConstraints];
-//        [self.view layoutSubtreeIfNeeded];
-//        [self.view.window layoutIfNeeded];
-//        [self.view.window updateConstraintsIfNeeded];
