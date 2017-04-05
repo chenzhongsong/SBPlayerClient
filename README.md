@@ -33,6 +33,18 @@ Support media file format include but not only *webm. *rmvb. *.asf *.avi *.divx 
 ![3](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss%20(2).jpg)
 ![4](https://github.com/shibiao/SBPlayerClient/blob/master/images/0x0ss1.jpg)
 
+## Shortcuts
+
+>play/pause: space
+decelerate: command + s
+accelerate: command + f
+Forward 10 seconds：→
+Back to 10 seconds：← 
+Sound plus：↑ 
+Sound reduction：↓ 
+open network： command + n
+open file：command + o
+next video： n
 
 > if you have any questions , please contact me 
 with email: 956035125@qq.com or issue it
