@@ -1,5 +1,5 @@
 # SBPlayerClient
-This is a video player based on VLCKit with beautiful skin 
+This is a video player based on [VLC](http://www.videolan.org/) with beautiful skin 
 
 ![icon](https://github.com/shibiao/SBPlayerClient/blob/master/images/icon32%402x.png)
 
