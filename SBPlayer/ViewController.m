@@ -600,11 +600,8 @@ NSTimer *leftSplitTimer;
     CGFloat height = player.videoSize.height;
     videoScaleRatio = width/height;
     if (!_isFullScreen) {
-//        if (height <= kScreenHeight - 60 ) {
-            
             [self.leftSplitView setFrameSize:NSMakeSize(width*videoScaleRatio, height)];
             [kCurrentWindow setContentSize:NSMakeSize(kScreenHeight/4*3*videoScaleRatio, kScreenHeight/4*3+60)];
-//        }
         if (width<=0&&height<=0) {
             self.playlist.hidden = YES;
             if (_loadingTipView) {
@@ -721,7 +718,7 @@ NSTimer *leftSplitTimer;
         [self showRightSplitView];
     }
 }
-//显示SplitView的左视图
+//显示SplitView的右视图
 -(void)showRightSplitView{
     CGFloat width = player.videoSize.width;
     CGFloat height = player.videoSize.height;
