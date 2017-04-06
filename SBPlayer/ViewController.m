@@ -422,11 +422,11 @@ NSTimer *leftSplitTimer;
             case VLCMediaPlayerStateError:{
                 [self.loadingTipView removeFromSuperview];
                 self.loadingTipView = nil;
-                [self removeVideoAndInitPlayer];
                 if (self.movie.url.relativePath.length == 0) {
                     [self play:nil];
                     return;
                 }
+                [self removeVideoAndInitPlayer];
                 [self addNotificationCenterWithInformative:NSLocalizedString(@"Play Error!", nil) withTitle:NSLocalizedString(@"Alert", @"alert")];\
                 //                [self setStop];
                 
