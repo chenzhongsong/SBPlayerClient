@@ -140,6 +140,22 @@
 - (IBAction)sbPlayerHelp:(id)sender {
     [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString: @"https://shibiao.github.io"]];
 }
+//声音减小
+- (IBAction)soundReduction:(id)sender {
+    [self.rootVC volumeDown];
+}
+//声音大
+- (IBAction)soundPlus:(id)sender {
+    [self.rootVC volumeUp];
+}
+//后退10秒
+- (IBAction)backToTenSeconds:(id)sender {
+    [self.rootVC progressWithTime:-10000];
+}
+//前进10秒
+- (IBAction)ForwardTenSeconds:(id)sender {
+    [self.rootVC progressWithTime:10000];
+}
 
 
 

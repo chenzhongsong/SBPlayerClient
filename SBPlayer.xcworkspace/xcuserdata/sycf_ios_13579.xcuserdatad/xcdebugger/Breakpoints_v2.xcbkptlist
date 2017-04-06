@@ -185,7 +185,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "593"
             endingLineNumber = "593"
-            landmarkName = "-setupSize"
+            landmarkName = "-setStop"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

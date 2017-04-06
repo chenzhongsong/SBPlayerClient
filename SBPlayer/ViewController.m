@@ -1148,31 +1148,19 @@ NSButton *fastBtn;
     }
     
 }
-//键盘事件
--(void)keyDown:(NSEvent *)event{
-    [super keyDown:event];
-    //上：126 下：125  控制音量大小
-    //左：123 右：124  控制进度条播放前进后退
-    if (event.keyCode == 123) {
-        [self progressWithTime:-10000];
-    }else if (event.keyCode == 124) {
-        [self progressWithTime:10000];
-    }else if (event.keyCode == 126) {
-        if (self.volumeProgressIndicator.doubleValue>=self.volumeProgressIndicator.maxValue) {
-            return;
-        }
-        self.volumeProgressIndicator.doubleValue += self.volumeProgressIndicator.maxValue/self.volumeProgressIndicator.bounds.size.width*(self.volumeProgressIndicator.bounds.size.width/10);
-    }else if (event.keyCode == 125){
-        if (self.volumeProgressIndicator.doubleValue <= 0) {
-            return;
-        }
-        self.volumeProgressIndicator.doubleValue -= self.volumeProgressIndicator.maxValue/self.volumeProgressIndicator.bounds.size.width*(self.volumeProgressIndicator.bounds.size.width/10);
+//声音增大
+-(void)volumeUp{
+    if (self.volumeProgressIndicator.doubleValue>=self.volumeProgressIndicator.maxValue) {
+        return;
     }
-    
+    self.volumeProgressIndicator.doubleValue += self.volumeProgressIndicator.maxValue/self.volumeProgressIndicator.bounds.size.width*(self.volumeProgressIndicator.bounds.size.width/10);
 }
-
--(void)keyUp:(NSEvent *)event{
-    
+//声音减小
+-(void)volumeDown{
+    if (self.volumeProgressIndicator.doubleValue <= 0) {
+        return;
+    }
+    self.volumeProgressIndicator.doubleValue -= self.volumeProgressIndicator.maxValue/self.volumeProgressIndicator.bounds.size.width*(self.volumeProgressIndicator.bounds.size.width/10);
 }
 //进度随着设置的时间间隔改变
 -(void)progressWithTime:(NSInteger)time{

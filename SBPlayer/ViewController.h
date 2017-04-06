@@ -47,6 +47,11 @@
 - (IBAction)next:(id)sender;
 //显示或者隐藏
 - (IBAction)showOrHidePlaylist:(id)sender;
-
+//控制播放进度
+-(void)progressWithTime:(NSInteger)time;
+//声音加
+-(void)volumeUp;
+//声音减
+-(void)volumeDown;
 @end
 
