@@ -6,6 +6,8 @@ This is a video player based on [VLC](http://www.videolan.org/) with beautiful s
 ## SBPlayer
 中文介绍请点击：[SBPlayerClient](http://www.jianshu.com/p/1ad52c702190)
 
+下载地址：[SBPlayer_v1.o](https://pan.baidu.com/s/1migCD8O)
+
 中文使用方法请点击：[教你熟练使用SBPlayer](http://www.jianshu.com/p/bd9716cafd38)
 
 SBPlayer is a beautiful and powerful media player base on VLCKit.
