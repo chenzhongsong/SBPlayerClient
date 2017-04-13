@@ -53,7 +53,7 @@ Support media file format include but not only： *webm. *rmvb. *.asf *.avi *.di
 
 ## 快捷键：
 
- >> 播放/暂停: 空格键
+播放/暂停: 空格键
  
 减速: command + s 
 
